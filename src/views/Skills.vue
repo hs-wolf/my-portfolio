@@ -58,18 +58,15 @@ const skills = [
       my career as a developer.
     </p>
     <div class="grid grid-cols-2 lg:grid-cols-4 gap-2">
-      <div
-        v-for="(skill, index) in skills"
-        :key="index"
+      <div v-for="(skill, index) in skills" :key="index"
         class="flex space-x-2 items-center border border-gray-300 dark:border-gray-600 p-2 flex-nowrap overflow-hidden rounded"
-        :class="skill.fullSize ? 'col-span-2 lg:col-span-1' : ''"
-      >
-        <font-awesome-icon
+        :class="skill.fullSize ? 'col-span-2 lg:col-span-1' : ''">
+        <!-- <font-awesome-icon
           :class="skill.color"
           :icon="skill.icon"
           size="2x"
           fixed-width
-        />
+        /> -->
         <span>{{ skill.name() }}</span>
       </div>
     </div>

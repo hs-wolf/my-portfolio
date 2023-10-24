@@ -47,7 +47,7 @@ const projects = [
               :title="project.title"
               class="hidden lg:flex w-full lg:w-auto items-center space-x-2 bg-green-400 dark:bg-green-600 p-2 rounded text-white hover:opacity-75"
             >
-              <font-awesome-icon :icon="['fab', 'github']" size="lg" />
+              <!-- <font-awesome-icon :icon="['fab', 'github']" size="lg" /> -->
               <span>Repo</span>
             </a>
             <div :class="{ hidden: !project.visit }">
@@ -57,10 +57,10 @@ const projects = [
                 :title="project.title"
                 class="hidden lg:flex w-full lg:w-auto items-center space-x-2 bg-blue-400 dark:bg-blue-600 p-2 rounded text-white hover:opacity-75"
               >
-                <font-awesome-icon
+                <!-- <font-awesome-icon
                   :icon="['fas', 'external-link-square-alt']"
                   size="lg"
-                />
+                /> -->
                 <span>Visit</span>
               </a>
             </div>
@@ -77,7 +77,7 @@ const projects = [
             :title="project.title"
             class="w-full lg:w-auto p-2 flex lg:hidden space-x-2 items-center bg-green-400 dark:bg-green-600 rounded text-white hover:opacity-75"
           >
-            <font-awesome-icon :icon="['fab', 'github']" size="lg" />
+            <!-- <font-awesome-icon :icon="['fab', 'github']" size="lg" /> -->
             <span>Repo</span>
           </a>
         </div>

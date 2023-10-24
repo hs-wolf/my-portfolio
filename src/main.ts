@@ -1,17 +1,18 @@
-import { createApp } from "vue";
-import App from "./App.vue";
-import { createPinia } from "pinia";
-import GlobalComponents from "./components";
-import Router from "./router";
-import FontAwesome from "./assets/fontAwesome";
-import VeeValidate from "./assets/veeValidate";
-import "./assets/style.css";
-import "animate.css";
+import "./assets/tailwind.css";
+import "./assets/main.css";
+import 'uno.css'
 
-const app = createApp(App);
-app.use(createPinia());
-app.use(GlobalComponents);
-app.use(Router);
-app.use(FontAwesome);
-app.use(VeeValidate);
-app.mount("#app");
+import App from "./App.vue";
+import Router from "./router";
+
+import { createApp } from "vue";
+import { createPinia } from "pinia";
+import { useThemeStore } from "./store/themeStore";
+
+const app = createApp(App)
+const pinia = createPinia()
+app.use(pinia)
+const themeStore = useThemeStore(pinia)
+themeStore.getThemeOnLoad()
+app.use(Router)
+app.mount("#app")

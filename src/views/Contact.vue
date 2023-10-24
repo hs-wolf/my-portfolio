@@ -1,13 +1,10 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import EmailJS from "@emailjs/browser";
-
-EmailJS.init("user_lNvCidcLlqI9z4yij7omh");
 
 let isInSubmission = ref(false);
 let showSubmission = ref(false);
 let submissionWarning = ref("");
-let submissionResult = ref(false);
+let submissionResult = ref(false); 
 
 const onSubmit = async (values: any) => {
   submissionWarning.value = "Sending message...";
@@ -20,7 +17,7 @@ const onSubmit = async (values: any) => {
     message: values.message,
   };
   try {
-    await EmailJS.send("service_njgtg69", "template_yxof420", templateParams);
+    // await EmailJS.send("service_njgtg69", "template_yxof420", templateParams);
   } catch (error) {
     submissionWarning.value = "Error, could not send message.";
     isInSubmission.value = false;
@@ -45,7 +42,7 @@ const messageSchema = {
       <p>Thanks for browsing my portfolio.</p>
       <p>Send me a nice message!</p>
     </h2>
-    <vee-form
+    <!-- <vee-form
       v-slot="{ resetForm }"
       class="flex flex-col w-full space-y-4"
       @submit="onSubmit"
@@ -105,6 +102,6 @@ const messageSchema = {
       >
         {{ submissionWarning }}
       </div>
-    </vee-form>
+    </vee-form> -->
   </div>
 </template>

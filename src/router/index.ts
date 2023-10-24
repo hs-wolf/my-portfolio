@@ -1,42 +1,39 @@
-import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
-import customRoutes from "./custom";
-import { convertToKebab } from "../assets/helper";
+import { createRouter, createWebHistory } from "vue-router";
+import Home from '@/views/Home.vue'
+import Contact from '@/views/Contact.vue'
+import Projects from '@/views/Projects.vue'
+import Skills from '@/views/Skills.vue'
 
-const views = import.meta.glob("../views/*.vue");
-const routes: Array<RouteRecordRaw> = [];
-
-Object.entries(views).forEach(([componentPath, definition]) => {
-  const name = convertToKebab(
-    (componentPath.split("/").pop() || "").replace(/\.\w+$/, "")
-  );
-  let path = `/${name}`;
-  const component = definition;
-  if (name === "home") {
-    path = "/";
-  }
-  const routeRecord: RouteRecordRaw = {
-    path,
-    name,
-    component,
-  };
-  routes.push(routeRecord);
-});
-
-routes.push(
-  ...[
+const router = createRouter({
+  history: createWebHistory(import.meta.env.BASE_URL),
+  routes: [
+    {
+      path: '/',
+      name: 'home',
+      component: Home
+    },
+    {
+      path: '/contact',
+      name: 'contact',
+      component: Contact
+    },
+    {
+      path: '/projects',
+      name: 'projects',
+      component: Projects
+    },
+    {
+      path: '/skills',
+      name: 'skills',
+      component: Skills
+    },
     {
       name: "not-found",
       path: "/:catchAll(.*)",
       redirect: { name: "home" },
     },
   ],
-  ...customRoutes
-);
-
-const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
-  routes,
-  linkActiveClass: "text-green-500",
+  linkActiveClass: "text-accent-dark dark:text-accent-light",
 });
 
 export default router;
