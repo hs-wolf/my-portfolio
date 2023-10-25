@@ -2,8 +2,8 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  @apply bg-secondary text-primary antialiased;
-  @apply dark:bg-primary dark:text-secondary antialiased;
+  @apply bg-secondary text-primary antialiased transition-colors duration-500;
+  @apply dark:bg-primary dark:text-secondary;
 }
 
 /* Hide scrollbar for IE, Edge and Firefox */

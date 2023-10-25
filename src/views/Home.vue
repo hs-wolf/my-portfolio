@@ -1,10 +1,4 @@
 <script setup lang="ts">
-import { useThemeStore } from "../store/themeStore";
-import { storeToRefs } from "pinia";
-
-const themeStore = useThemeStore();
-const { darkMode } = storeToRefs(themeStore);
-
 const skills = [
   { name: "Linux", icon: 'i-skill-icons:linux-light', color: "text-orange-500" },
   { name: "Git", icon: 'i-skill-icons:git', color: "text-orange-500" },
@@ -66,34 +60,30 @@ const projects = [
   {
     title: "Rpg Together",
     description:
-      "A social app for people who play TTRPG (Table Top Role Playing Games).\nThis is my personal flagship project that utilizes most of my tech stack, from front-end developing, to cloud services and CI/CD.",
+      "A social app for people who play TTRPG (Table Top Role Playing Games).\nThis is my flagship project that utilizes most of my tech stack, from front-end development to cloud services and CI/CD.",
     repo: "https://github.com/hs-wolf/rpg-together/",
     visit: "https://client-lmggplptsq-ue.a.run.app/",
   },
   {
     title: "Booktone",
     description:
-      "A social app focused around media sharing. It was a medium sized project for a Israeli client.\nI worked here as a full-stack developer in a 5 man team, hired by Vizo Dev.",
+      "A social app focused on media sharing. It was a medium-sized project for an Israeli client. I worked here as a full-stack developer in a 5 man team, hired by Vizo Dev.",
     visit: "https://dev.booktone.co.il/",
   },
   {
     title: "Taverna Central",
     description:
-      "A managing and administration bot for a Discord server.\nI worked here as project lead in a 3 man team.",
+      "A managing and administration bot for a Discord server. I worked here as project lead in a 3-man team.",
     repo: "https://github.com/josh-israel/bot-discord-taverna-central",
   },
 ];
 </script>
 
 <template>
-  <div class="flex flex-col">
-    <div class="flex flex-col gap-4 w-full lg:gap-8 p-4 lg:px-0 lg:py-8 lg:max-w-5xl lg:mx-auto">
-      <div class="flex justify-between">
-        <div class="flex w-1/2 max-w-xs aspect-square">
-          <img src="@/assets/imgs/pp.jpg" alt="Profile Picture" class="w-full rounded-full" />
-        </div>
-        <button @click.prevent="themeStore.toggleDarkMode()" class="text-3xl lg:text-4xl"
-          :class="darkMode ? 'i-carbon:moon' : 'i-carbon:sun'" />
+  <div class="flex flex-col w-full">
+    <div class="flex flex-col gap-8 w-full lg:gap-16 px-4 py-8 lg:px-0 lg:py-16 lg:max-w-5xl lg:mx-auto">
+      <div class="flex w-1/2 max-w-xs aspect-square">
+        <img src="@/assets/imgs/pp.jpg" alt="Profile Picture" class="w-full rounded-full" />
       </div>
       <h1 class="text-3xl lg:text-4xl font-medium">&lt;hello-there /&gt;</h1>
       <h2 class="text-4xl lg:text-5xl  text-accent-dark dark:text-accent">My name is <strong>José (Joseph)
@@ -105,15 +95,15 @@ const projects = [
         </p>
         <p>
           I blend front-end finesse with back-end wizardry to create websites and apps that leave a lasting impression.
-          Ready to take me in your team? Let's chat and make it happen!
+          Ready to take me on your team? Let's chat and make it happen!
         </p>
       </div>
     </div>
     <div class="flex bg-primary text-secondary dark:bg-secondary dark:text-primary">
-      <div class="flex flex-col gap-4 w-full p-4 lg:gap-8 lg:max-w-5xl lg:mx-auto lg:px-0 lg:py-8">
+      <div class="flex flex-col gap-8 w-full px-4 py-8 lg:gap-16 lg:max-w-5xl lg:mx-auto lg:px-0 lg:py-16">
         <h1 class="text-3xl lg:text-4xl font-medium">&lt;experience /&gt;</h1>
-        <p class="text-xl lg:text-2xl leading-8 lg:leading-9">
-          Check out the latest projects I worked on, from personal endeavours to company contracts.
+        <p class="text-xl opacity-70 lg:text-2xl leading-8 lg:leading-9">
+          Check out the latest projects I worked on, from personal endeavors to company contracts.
         </p>
         <div class="grid grid-cols-1 gap-4 lg:gap-8">
           <div v-for="project in projects" :key="project.title" class="flex flex-col gap-2 rounded-sm">
@@ -137,13 +127,12 @@ const projects = [
         </div>
       </div>
     </div>
-    <div class="flex flex-col gap-4 w-full p-4 lg:px-0 py-8 lg:max-w-5xl lg:mx-auto">
+    <div class="flex flex-col gap-8 w-full px-4 py-8 lg:gap-16 lg:px-0 lg:py-16 lg:max-w-5xl lg:mx-auto">
       <h1 class="text-3xl lg:text-4xl font-medium">&lt;skill-set /&gt;</h1>
       <p class="text-xl lg:text-2xl leading-8 lg:leading-9">
-        These are all the languages, tools and skills that I've learned and throughout
-        my career as a developer.
+        These are all the languages, tools, and skills that I've learned throughout my career as a developer.
       </p>
-      <div class="grid grid-cols-2 lg:grid-cols-4 gap-2">
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-2 lg:gap-4">
         <div v-for="(skill, index) in skills" :key="index"
           class="flex items-center gap-2 w-full bg-secondary dark:bg-primary border border-primary-light/20 dark:border-secondary-dark/20 p-2 flex-nowrap overflow-hidden rounded transition-transform hover:animate-pulse hover:scale-110 hover:z-10"
           :class="skill.fullSize ? 'col-span-2 lg:col-span-2' : ''">
