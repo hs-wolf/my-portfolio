@@ -1,5 +1,6 @@
-import "./assets/tailwind.css";
-import "./assets/main.css";
+import "./assets/css/tailwind.css";
+import "./assets/css/main.css";
+import "./assets/css/transitions.css";
 import 'uno.css'
 
 import App from "./App.vue";
