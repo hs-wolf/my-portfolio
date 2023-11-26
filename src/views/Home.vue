@@ -83,7 +83,7 @@ const projects = [
   <div class="flex flex-col w-full">
     <div class="flex flex-col gap-8 w-full lg:gap-16 px-4 py-8 lg:px-0 lg:py-16 lg:max-w-5xl lg:mx-auto">
       <div class="flex w-1/2 max-w-xs aspect-square">
-        <img src="@/assets/imgs/pp.jpg" alt="Profile Picture" class="w-full rounded-full" />
+        <img src="@/assets/imgs/pp.png" alt="Profile Picture" class="w-full rounded-full" />
       </div>
       <h1 class="text-3xl lg:text-4xl font-medium">&lt;hello-there /&gt;</h1>
       <h2 class="text-4xl lg:text-5xl  text-accent-dark dark:text-accent">My name is <strong>José (Joseph)
