@@ -91,11 +91,10 @@ const projects = [
       </h2>
       <div class="flex flex-col gap-4 text-xl lg:text-2xl leading-8 lg:leading-9">
         <p>
-          I'm a full-stack web developer passionate about turning ideas into sleek, user-friendly web solutions.
+          Hardworking and ambitious, I thrive on solving problems using technology, particularly within teams where collaboration fosters skill improvement.
         </p>
         <p>
-          I blend front-end finesse with back-end wizardry to create websites and apps that leave a lasting impression.
-          Ready to take me on your team? Let's chat and make it happen!
+          Currently pursuing a position as a full-stack/front-end/back-end web developer in the industry, with the next goal of transitioning into a DevOps engineer.
         </p>
       </div>
     </div>
