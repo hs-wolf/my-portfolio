@@ -62,7 +62,7 @@ const projects = [
     description:
       "A social app for people who play TTRPG (Table Top Role Playing Games).\nThis is my flagship project that utilizes most of my tech stack, from front-end development to cloud services and CI/CD.",
     repo: "https://github.com/hs-wolf/rpg-together/",
-    visit: "https://client-lmggplptsq-ue.a.run.app/",
+    visit: "https://rpgtogether.net/",
   },
   {
     title: "Booktone",
