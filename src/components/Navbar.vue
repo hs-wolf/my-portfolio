@@ -30,7 +30,7 @@ const socialLinks = [
     icon: 'i-carbon:logo-linkedin',
   },
   {
-    href: "josé-israel-resume.pdf",
+    href: "jose-israel-resume-en.pdf",
     title: "Resume",
     icon: 'i-carbon:generate-pdf',
   },
@@ -50,7 +50,6 @@ const socialLinks = [
     <div class="flex items-center gap-4 lg:gap-8 text-3xl lg:text-4xl">
       <a v-for="link in socialLinks" :key="link.title" :href="link.href" target="_blank" :title="link.title"
         class="flex transition-transform hover:scale-95" :class="link.icon" />
-
     </div>
   </div>
 </template>
