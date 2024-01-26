@@ -4,7 +4,7 @@
       <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="text-green-500">CC BY-NC-SA
         4.0
       </a>
-      <span>2023 © José Israel</span>
+      <span>2024 © José Israel</span>
     </p>
   </footer>
 </template>
